@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: rgb(127, 203, 203);
+        }
+        h1, h2{
+            text-align: center;
+            padding: 10px;
+            background-color: blueviolet;
+            font-weight: bolder;
+            width: 40%;
+            margin: auto;
+        }
+        h1{
+            margin-top: 10%;
+        }
+        div{
+            text-align: center;
+            padding: 10px;
+        }
+        button{
+            background-color: rgb(71, 71, 227);
+            color: azure;
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: rgb(106, 163, 212);
+            color: blue;
+        }
+        div label{
+            font-size:x-large;
+            margin: 40px 0;
+        }
+        div input{
+            width: 400px;
+            height: 40px;
+            border-radius: 20px;
+            font-size: larger;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Palindrome Checker</h1>
+    <div>
+        <div><label for="text-input">Enter in text to check for a Palondrome</label></div>
+        <input type="text" id="text-input" name="text">
+    </div>
+
+    <div>
+        <button id="check-btn">Check</button>
+    </div>
+    <h2 id="result"></h2>
+
+    <script>
+        document.getElementById("check-btn").addEventListener('click', palindromeChecker);
+        
+        function palindromeChecker(){
+            
+            let input = document.getElementById('text-input').value;
+            if(input == ""){
+                alert("Please input a value");
+            }else{
+                let lowerInput = input.toLowerCase();
+            console.log("Input is "+ input);
+
+            let alphaInput = "";
+            for(let i = 0; i < lowerInput.length; i++) {
+                let char = lowerInput[i];
+                if(((char >= 'a' && char <= 'z') || (char >= 0 && char <= 9)) && (char != " ")) {
+                alphaInput += char;
+                }
+            }
+
+
+            console.log(lowerInput);
+            console.log(alphaInput);
+            let isPalindrome = (alphaInput === alphaInput.split('').reverse().join(''));
+            console.log(isPalindrome);
+            if(isPalindrome){
+                document.getElementById('result').innerHTML = input + " is a Palindrome"
+            }else{
+                document.getElementById('result').innerHTML = input + " is not a Palindrome"
+            }    
+            }
+            
+        };
+    </script>
+</body>
+</html>
