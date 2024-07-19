@@ -156,7 +156,7 @@
       }
 
       .task {
-        margin: 5px 0px;
+        margin: 5px 10px;
       }
 
       .hidden {
@@ -175,7 +175,7 @@
         #date-input {
           height: 2rem;
         }
-        #title-input #date-input #description-input {
+        #title-input, #date-input, #description-input {
           padding: 5px;
           margin-bottom: 7%;
         }
@@ -232,11 +232,11 @@
           </div>
         </form>
 
-        <dialog class="confirm-close-dialog">
+        <dialog class="confirm-close-dialog" id="confirm-close-dialog">
           <form method="dialog">
             <p class="discard-message-text">Discard Unsaved Changed?</p>
             <div class="confirm-close-dialog-btn-container">
-              <button id="cencel-btn" class="btn">Cencel</button>
+              <button id="cancel-btn" class="btn">Cencel</button>
               <button id="discard-btn" class="btn">Discard</button>
             </div>
           </form>
