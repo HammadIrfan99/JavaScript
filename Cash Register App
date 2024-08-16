@@ -110,12 +110,6 @@
           font-size: larger;
           margin-bottom: 5px;
         }
-        .status{
-          color: white;
-          font-size: larger;
-          margin-bottom: 5px;
-          text-align: center;
-        }
 
     </style>
   </head>
