@@ -1,296 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="">
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        :root{
-          --background: #0A0A23;
-          --purchase-btn: #FEC546;
-          --heading: #DFDFE2;
-          --black: #000000;
-          --blue: #99C9FF;
-        }
-        body{
-          background-color: var(--background);
-        }
-        .landingScreen{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-        }
-        h1{
-          margin-top: 7vh;
-          margin-bottom: 30px;
-          color: var(--heading);
-          font-size: 7vh;
-        }
-        .change-due{
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        .input-div{
-          display: flex;
-          flex-direction: column;
-          gap: 3vh;
-          margin-bottom: 30px;
-        }
-        label{
-          color: var(--heading);
-          font-size: 4vh;
-        }
-        input{
-          border: none;
-          height: 4vh;
-          width: 70%;
-          margin: auto;
-          padding: 10px;
-          font-size: larger;
-        }
-        #purchase-btn{
-          color: black;
-          background-color: var(--purchase-btn);
-          width: 100px;
-          margin: auto;
-          height: 5vh;
-          font-size: large;
-          border: 4px solid #b87e0a;
-        }
-        #purchase-btn:hover{
-          background-color: #e9ae30;
-        }
-        .price{
-          background-color: black;
-          color: white;
-          text-align: center;
-          padding: 5px;
-          border: 10px solid #99C9FF;
-          margin: auto;
-          width: 40%;
-        }
-        .btn{
-          height: 25px;
-          width: 25px;
-          background-color: var(--black);
-        }
-        .side-by-side{
-          display: flex;
-          flex-direction: row;
-          margin-top: 20px;
-          background-color: var(--blue);
-          padding: 20px;
-          border-radius: 5%;
-          width: 320px;
-          height: 250px;
-        }
-        .buttons{
-          width: 30%;
-        }
-        .drawer{
-          background-color: white;
-          width: 50%;
-          margin-left: auto;
-          padding: 5px;          
-        }
-        .change-due{
-          margin: 10px auto;
-        }
-        .change-due p{
-          color: white;
-          font-size: larger;
-          margin-bottom: 5px;
-        }
 
-    </style>
-  </head>
-  <body>
-    <div class="landingScreen">
-      <h1>Cash Register App</h1>
-      <div class="change-due" id="change-due"></div>
-      <div class="input-div">
-        <label for="cash">Enter Cash from Customer</label>
-        <input type="number" id="cash" />
-        <button type="button" id="purchase-btn">Purchase</button>
-      </div>
-      <div class="container">
-        <div class="price" id="price">Total: $1.87</div>
-        <div class="side-by-side">
-          <div class="buttons">
-            <button class="btn"></button>
-            <button class="btn"></button>
-            <button class="btn"></button>
-            <button class="btn"></button>
-            <button class="btn"></button>
-            <button class="btn"></button>
-            <button class="btn"></button>
-            <button class="btn"></button>
-            <button class="btn"></button>
-          </div>
-          <div class="drawer" id="drawer">
-              <p><strong>Change in Drawer</strong></p>
-              <p>Pennies: $1.01</p>
-              <p>Nickles: $2.05</p>
-              <p>Dimes: $3.1</p>
-              <p>Quarters: $4.25</p>
-              <p>Ones: $90</p>
-              <p>Fives: $55</p>
-              <p>Tens: $20</p>
-              <p>Twenties: $60</p>
-              <p>Hundreds: $100</p>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --background: #0A0A23;
+      --purchase-btn: #FEC546;
+      --heading: #DFDFE2;
+      --black: #000000;
+      --blue: #99C9FF;
+    }
+
+    body {
+      background-color: var(--background);
+    }
+
+    .landingScreen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      margin-top: 7vh;
+      margin-bottom: 30px;
+      color: var(--heading);
+      font-size: 7vh;
+    }
+
+    .change-due {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .input-div {
+      display: flex;
+      flex-direction: column;
+      gap: 3vh;
+      margin-bottom: 30px;
+    }
+
+    label {
+      color: var(--heading);
+      font-size: 4vh;
+    }
+
+    input {
+      border: none;
+      height: 4vh;
+      width: 70%;
+      margin: auto;
+      padding: 10px;
+      font-size: larger;
+    }
+
+    #purchase-btn {
+      color: black;
+      background-color: var(--purchase-btn);
+      width: 100px;
+      margin: auto;
+      height: 5vh;
+      font-size: large;
+      border: 4px solid #b87e0a;
+    }
+
+    #purchase-btn:hover {
+      background-color: #e9ae30;
+    }
+
+    .price {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 5px;
+      border: 10px solid #99C9FF;
+      margin: auto;
+      width: 40%;
+    }
+
+    .btn {
+      height: 25px;
+      width: 25px;
+      background-color: var(--black);
+    }
+
+    .side-by-side {
+      display: flex;
+      flex-direction: row;
+      margin-top: 20px;
+      background-color: var(--blue);
+      padding: 20px;
+      border-radius: 5%;
+      width: 320px;
+      height: 250px;
+    }
+
+    .buttons {
+      width: 30%;
+    }
+
+    .drawer {
+      background-color: white;
+      width: 50%;
+      margin-left: auto;
+      padding: 5px;
+    }
+
+    .change-due {
+      margin: 10px auto;
+    }
+
+    .change-due p {
+      color: white;
+      font-size: larger;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="landingScreen">
+    <h1>Cash Register App</h1>
+    <div class="change-due" id="change-due"></div>
+    <div class="input-div">
+      <label for="cash">Enter Cash from Customer</label>
+      <input type="number" id="cash" />
+      <button type="button" id="purchase-btn">Purchase</button>
+    </div>
+    <div class="container">
+      <div class="price">Total: $1.87</div>
+      <div class="side-by-side">
+        <div class="buttons">
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+        </div>
+        <div class="drawer" id="drawer">
+          <p><strong>Change in Drawer</strong></p>
+          <p>Pennies: $1.01</p>
+          <p>Nickles: $2.05</p>
+          <p>Dimes: $3.1</p>
+          <p>Quarters: $4.25</p>
+          <p>Ones: $90</p>
+          <p>Fives: $55</p>
+          <p>Tens: $20</p>
+          <p>Twenties: $60</p>
+          <p>Hundreds: $100</p>
         </div>
       </div>
     </div>
+  </div>
 
-    <script>
+  <script>
+    let price = 19.5;
+    let cid = [
+      ["PENNY", 1.01],
+      ["NICKEL", 2.05],
+      ["DIME", 3.1],
+      ["QUARTER", 4.25],
+      ["ONE", 90],
+      ["FIVE", 55],
+      ["TEN", 20],
+      ["TWENTY", 60],
+      ["ONE HUNDRED", 100]
+    ];
 
-      let price = 1.87;
-      let cid = [
-        ["PENNY", 1.01],
-        ["NICKEL", 2.05],
-        ["DIME", 3.1],
-        ["QUARTER", 4.25],
-        ["ONE", 90],
-        ["FIVE", 55],
-        ["TEN", 20],
-        ["TWENTY", 60],
-        ["ONE HUNDRED", 100],
-      ];
+    const denominations = [
+      { name: 'ONE HUNDRED', value: 100 },
+      { name: 'TWENTY', value: 20 },
+      { name: 'TEN', value: 10 },
+      { name: 'FIVE', value: 5 },
+      { name: 'ONE', value: 1 },
+      { name: 'QUARTER', value: 0.25 },
+      { name: 'DIME', value: 0.1 },
+      { name: 'NICKEL', value: 0.05 },
+      { name: 'PENNY', value: 0.01 }
+    ];
 
-      let cidReversed = [
-        {currency:'HUNDRED', amount: 100, value:100},
-        {currency:'TWENTY', amount: 60, value:20},
-        {currency:'TEN', amount: 20, value:10},
-        {currency:'FIVE', amount: 55, value:5},
-        {currency:'ONE', amount: 90, value:1},
-        {currency:'QUARTER', amount: 4.25, value:0.25},
-        {currency:'DIME', amount: 3.1, value:0.1},
-        {currency:'NICKEL', amount: 2.05, value:0.05},
-        {currency:'PENNY', amount: 1.01, value:0.01},
-      ]
-      
+    const getCidOrdered = () => {
+      return denominations.map(denom => {
+        const cidItem = cid.find(item => item[0] === denom.name);
+        return {
+          currency: denom.name,
+          amount: cidItem ? cidItem[1] : 0,
+          value: denom.value
+        };
+      });
+    };
 
-      const cashInput = document.getElementById("cash");
-      const button = document.getElementById("purchase-btn");
-      const changeDueDiv = document.getElementById("change-due");
-      const drawer = document.getElementById("drawer");  
- 
-    const displayChange = (change_Due) => {
-        changeDueDiv.innerHTML = "";
-        let changeHtml = "";
-        let drawerHtml = "";
-        let totalChangeGiven = 0.0;
+    const cashInput = document.getElementById("cash");
+    const button = document.getElementById("purchase-btn");
+    const changeDueDiv = document.getElementById("change-due");
 
-        // Checking for Funds
-        let checkAmountInDrawer = 0.0;
-        for (const { amount } of cidReversed) {
-            checkAmountInDrawer += amount;
+    const updateDrawerDisplay = () => {
+        const drawer = document.getElementById("drawer");
+        drawer.innerHTML = `<p><strong>Change in Drawer</strong></p>`;
+
+        cid.forEach(([currency, amount]) => {
+          drawer.innerHTML += `<p>${currency}: $${amount.toFixed(2)}</p>`;
+        });
+      };
+
+      const displayChange = (changeDue) => {
+        let changeArray = [];
+        let totalChangeGiven = 0;
+        let status = "OPEN";
+
+        const cidOrdered = getCidOrdered();
+        const totalInDrawer = cidOrdered.reduce((sum, { amount }) => sum + amount, 0);
+
+        if (totalInDrawer < changeDue) {
+          changeDueDiv.innerHTML = `<p>Status: INSUFFICIENT_FUNDS</p>`;
+          return;
         }
-  
-        if (checkAmountInDrawer < change_Due) {
-            console.log("INSUFFICIENT_FUNDS");
-            console.log(`"checkAmountInDrawer"${checkAmountInDrawer}`); 
-            console.log(`"change_Due"${change_Due}`);  
+
+        if (totalInDrawer === changeDue) {
+          status = "CLOSED";
+          changeArray = cidOrdered.filter(item => item.amount > 0).map(item => [item.currency, item.amount]);
+        } else {
+          for (let { currency, amount, value } of cidOrdered) {
+            let currencyChange = 0;
+
+            while (changeDue >= value && amount > 0) {
+              changeDue = parseFloat((changeDue - value).toFixed(2));
+              amount = parseFloat((amount - value).toFixed(2));
+              currencyChange += value;
+              totalChangeGiven = parseFloat((totalChangeGiven + value).toFixed(2));
+            }
+
+            if (currencyChange > 0) {
+              changeArray.push([currency, currencyChange]);
+
+              // Update the original `cid` to reflect the change given
+              const cidItem = cid.find(item => item[0] === currency);
+              if (cidItem) cidItem[1] = parseFloat(amount.toFixed(2));
+            }
+          }
+
+          if (changeDue > 0) {
             changeDueDiv.innerHTML = `<p>Status: INSUFFICIENT_FUNDS</p>`;
             return;
+          }
         }
 
-        for (const currencyObj of cidReversed) {
-            const { currency, value } = currencyObj;
-            let amount = currencyObj.amount;
-
-            if (change_Due === 0) {
-                break;
-            }
-
-            let initialAmount = amount; // Define initialAmount within the loop
-
-            while (parseFloat(change_Due.toFixed(2)) >= value && amount >= value) {
-                change_Due = parseFloat((change_Due - value).toFixed(2));
-                amount = parseFloat((amount - value).toFixed(2));
-            }
-            console.log(`"amount"${amount}`);
-
-            // Update amount in drawer
-            currencyObj.amount = amount;
-            totalChangeGiven += parseFloat((initialAmount - amount).toFixed(2));
-
-            if (initialAmount !== amount) {
-                let changeAmount = initialAmount - amount;
-                let formattedChange;
-
-                if (changeAmount % 1 === 0) {
-                    // No meaningful value after the decimal point, so show without decimals
-                    formattedChange = `$${changeAmount.toFixed(0)}`;
-                } else {
-                    // Show up to the first non-zero digit after the decimal point
-                    formattedChange = `$${parseFloat(changeAmount.toFixed(2))}`;
-                }
-
-                changeHtml += `<p>${currency}: ${formattedChange}</p>`;
-            }
-        }
-
-        console.log(`"totalChangeGiven"${totalChangeGiven}`);
-        // Update the status
-        if (totalChangeGiven === checkAmountInDrawer) {
-            changeHtml = `<p>Status: CLOSED</p>` + changeHtml;
-        } else {
-            changeHtml = `<p>Status: OPEN</p>` + changeHtml;
-        }
-        
-        // Display the drawer
-        drawerHtml += `<p><strong>Change in Drawer</strong></p>`;
-        for (const { currency, amount } of cidReversed.reverse()) {
-            drawerHtml += `<p>${currency}: $${amount.toFixed(2)}</p>`;
+        let changeHtml = `<p>Status: ${status}</p>`;
+        for (let [currency, amount] of changeArray) {
+          changeHtml += `<p>${currency}: $${amount.toFixed(2)}</p>`;
         }
 
         changeDueDiv.innerHTML = changeHtml;
-        drawer.innerHTML = drawerHtml;
-        cashInput.value = "";
-    };
 
-    const checkResults = (change_Due) => {
+        // Update the drawer display with the new amounts
+        updateDrawerDisplay();
+      };
+
+      const checkResults = () => {
         const cash = parseFloat(cashInput.value);
-        console.log(cash);
-        changeDueDiv.innerHTML = "";
         if (cash < price) {
-            alert("Customer does not have enough money to purchase the item");
-            return;
+          alert("Customer does not have enough money to purchase the item");
+          return;
         } else if (cash === price) {
-            changeDueDiv.innerHTML = `<p>No change due - customer paid with exact cash</p>`;
-            cashInput.value = "";
-            return;
-        } else if (cash > price) {
-            displayChange(change_Due);
+          changeDueDiv.innerHTML = `<p>No change due - customer paid with exact cash</p>`;
+        } else {
+          const changeDue = parseFloat((cash - price).toFixed(2));
+          displayChange(changeDue);
         }
-    };  
+        cashInput.value = "";
+      };
+
+      // Initial display of the cash in drawer
+      updateDrawerDisplay();
+
+
+    button.addEventListener("click", checkResults);
 
     cashInput.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") {
-            const cash = parseFloat(cashInput.value);
-            let change_Due = cash - price;
-            checkResults(change_Due);
-        }
-        });
-
-    button.addEventListener("click", () => {
-        const cash = parseFloat(cashInput.value);
-        let change_Due = cash - price;
-        checkResults(change_Due);
+      if (e.key === "Enter") {
+        checkResults();
+      }
     });
 
-    </script>
-  </body>
-</html>
+  </script>
+</body>
 
+</html>
